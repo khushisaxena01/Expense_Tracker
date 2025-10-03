@@ -1,18 +1,12 @@
-# 💰 Expense Tracker - Enterprise-Grade Financial Management Platform
+# Expense Tracker - Enterprise-Grade Financial Management Platform
 
 A **production-ready financial management system** with **enterprise-level security**, comprehensive authentication, and advanced analytics. Track income, expenses, and financial health with **bank-grade security measures**.
 
-## 🎯 Project Status
-
-✅ **Backend & Security: 100% Complete**  
-🔄 **Frontend: In Progress**  
-📋 **AI Service: Planned**
-
 ---
 
-## ✨ Features
+##  Features
 
-### 🔐 Authentication & Security (Complete)
+###  Authentication & Security (Complete)
 - **JWT Authentication** with access & refresh tokens
 - **Token Management** (blacklisting, rotation, refresh mechanism)
 - **Account Security** (lockout after failed attempts, session management)
@@ -23,7 +17,7 @@ A **production-ready financial management system** with **enterprise-level secur
 - **Security Headers** (Helmet.js, CORS, CSP)
 - **Audit Logging** (login history, IP tracking, device fingerprinting)
 
-### 💼 Core Backend APIs (Complete)
+###  Core Backend APIs (Complete)
 - **Income Management** (CRUD, filtering, search, Excel export)
 - **Expense Management** (CRUD, filtering, search, Excel export)
 - **Dashboard Analytics** (financial health, trends, category breakdown)
@@ -33,7 +27,7 @@ A **production-ready financial management system** with **enterprise-level secur
 - **Duplicate Detection** for transactions
 - **Budget Alerts** & savings goal tracking
 
-### 📊 Advanced Features (Complete)
+###  Advanced Features (Complete)
 - **Monthly/Weekly Trends** analysis
 - **Category & Source Breakdown** with aggregations
 - **Recurring Income** tracking with auto-calculation
@@ -43,7 +37,7 @@ A **production-ready financial management system** with **enterprise-level secur
 - **Tags System** for organization
 - **Client/Employer** information management
 
-### 🗄️ Database (Complete)
+###  Database (Complete)
 - **MongoDB** with optimized indexing
 - **Enhanced Models** (User, Income, Expense)
 - **Field Validation** with security patterns
@@ -53,7 +47,7 @@ A **production-ready financial management system** with **enterprise-level secur
 - **Connection Pooling** & retry logic
 - **Graceful Shutdown** handling
 
-### 📁 File Management (Complete)
+###  File Management (Complete)
 - **Secure File Upload** (Multer with validation)
 - **File Type Validation** & size limits
 - **Path Traversal Protection**
@@ -63,7 +57,7 @@ A **production-ready financial management system** with **enterprise-level secur
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Backend (Complete)
 - **Runtime:** Node.js v16+
@@ -93,11 +87,11 @@ A **production-ready financial management system** with **enterprise-level secur
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 Expense_Tracker/
-├── backend/                    # ✅ Complete
+├── backend/                    #  Complete
 │   ├── config/
 │   │   └── db.js              # Enhanced DB connection with retry logic
 │   ├── models/
@@ -134,7 +128,7 @@ Expense_Tracker/
 
 ---
 
-## 🚀 Setup & Installation
+##  Setup & Installation
 
 ### Prerequisites
 - Node.js >= 16.0.0
