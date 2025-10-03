@@ -1,0 +1,5 @@
+node_modules/
+.env
+Expense_Tracker.code-workspace
+
+.vercel

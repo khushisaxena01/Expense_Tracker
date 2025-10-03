@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme{
+   --font-display: "Poppins", "sans-serif" ;
+   --breakpoint-3xl: 1920px ;
+   --color-primary: #875cf5;
+}
+
+@layer base{
+   html{
+      font-family: var(--font-display);
+   }
+
+   body{
+      background-color: black;
+      overflow-x: hidden;
+   }
+}
+
+/* Darker Shades for Blocks */
+.block-red {
+   position: absolute;
+   width: 6rem;
+   height: 10rem;
+   background-color: #BF360C; /* Darker Deep Orange */
+   border: 2px solid white;
+   border-radius: 10px;
+   top: 2.5rem;
+   left: 1.25rem;
+   animation: moveRightMax 3s infinite ease-in-out alternate, neonGlow 1.5s infinite alternate;
+ }
+ 
+ .block-blue {
+   position: absolute;
+   width: 6rem;
+   height: 10rem;
+   background-color: #0D47A1; /* Darker Electric Blue */
+   border: 2px solid white;
+   border-radius: 10px;
+   bottom: 2.5rem;
+   right: 1.25rem;
+   animation: moveLeftMax 3s infinite ease-in-out alternate, neonGlowBlue 1.5s infinite alternate;
+ }
+ 
+ /* Restoring Block Movement */
+ @keyframes moveRightMax {
+   0% { transform: translateX(0); }
+   100% { transform: translateX(100px); } /* Moves right */
+ }
+ 
+ @keyframes moveLeftMax {
+   0% { transform: translateX(0); }
+   100% { transform: translateX(-100px); } /* Moves left */
+ }
+ 
+ /* Darker Neon Glow Effect */
+ @keyframes neonGlow {
+   0% { box-shadow: 0 0 5px rgba(191, 54, 12, 0.5), 0 0 10px rgba(191, 54, 12, 0.4); }
+   50% { box-shadow: 0 0 10px rgba(191, 54, 12, 0.7), 0 0 20px rgba(191, 54, 12, 0.5); }
+   100% { box-shadow: 0 0 5px rgba(191, 54, 12, 0.5), 0 0 10px rgba(191, 54, 12, 0.4); }
+ }
+ 
+ @keyframes neonGlowBlue {
+   0% { box-shadow: 0 0 5px rgba(13, 71, 161, 0.5), 0 0 10px rgba(13, 71, 161, 0.4); }
+   50% { box-shadow: 0 0 10px rgba(13, 71, 161, 0.7), 0 0 20px rgba(13, 71, 161, 0.5); }
+   100% { box-shadow: 0 0 5px rgba(13, 71, 161, 0.5), 0 0 10px rgba(13, 71, 161, 0.4); }
+ }
+ 
+ /* Video Styling with Darker Neon */
+ .video-style {
+   position: absolute;
+   width: 80%;
+   height: auto;
+   object-fit: cover;
+   box-shadow: 0px 4px 15px rgba(139,0,0,0.8);
+   border-radius: 3rem;
+   bottom: 5rem;
+ }
+
+ .input-box {
+   @apply w-full flex justify-between gap-3 text-sm 
+   text-white bg-black rounded-2xl px-4 py-3 
+   mb-2 mt-1 border border-gray-500 outline-none 
+   focus:ring-2 focus:ring-blue-500;
+}
+
+ /* Custom thin dark scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #111; /* Match box background */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #444; /* Subtle gray */
+  border-radius: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #666;
+}
+
+/* Thin scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2); /* Light white tint */
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* Slightly more visible on hover */
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.neon-blue-glow {
+  background-color: #0d1b2a;
+  border: 1px solid rgba(0, 123, 255, 0.4);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.7), 0 0 30px rgba(0, 123, 255, 0.4);
+}
+
+.neon-green-glow {
+  background-color: #102a13;
+  border: 1px solid rgba(0, 255, 135, 0.4);
+  box-shadow: 0 0 15px rgba(0, 255, 135, 0.7), 0 0 30px rgba(0, 255, 135, 0.4);
+}
+
+.neon-red-glow {
+  background-color: #2a0d0d;
+  border: 1px solid rgba(255, 0, 80, 0.4);
+  box-shadow: 0 0 15px rgba(255, 0, 80, 0.7), 0 0 30px rgba(255, 0, 80, 0.4);
+}
+
+.add-btn{
+  @apply flex items-center gap-1.5 text-xs md:text-sm font-medium text-green-500 whitespace-nowrap bg-green-100 border-white rounded-lg px-4 py-2 cursor-pointer;
+}
+
+.add-btn-fill {
+  @apply flex items-center gap-1.5 text-xs md:text-sm font-medium;
+}
+
+

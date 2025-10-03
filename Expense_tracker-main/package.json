@@ -1,0 +1,28 @@
+{
+  "name": "expense-tracker-fullstack",
+  "version": "1.0.0",
+  "description": "Secure expense tracker with React frontend and Node.js backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start:dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server": "cd backend && npm start",
+    "server:dev": "cd backend && npm run dev",
+    "server:prod": "cd backend && npm run start:prod",
+    "client": "cd frontend && npm start",
+    "client:dev": "cd frontend && npm run dev",
+    "client:build": "cd frontend && npm run build",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "build": "cd frontend && npm run build",
+    "test": "cd backend && npm test && cd ../frontend && npm test",
+    "health": "curl -X GET http://localhost:3000/health || echo 'Server not running'",
+    "clean": "rm -rf backend/node_modules frontend/node_modules backend/logs/*.log backend/uploads/*",
+    "setup": "npm run install:all && mkdir -p backend/logs backend/uploads/profiles backend/uploads/documents backend/uploads/exports backend/uploads/temp"
+  },
+  "keywords": ["expense-tracker", "react", "nodejs", "mongodb", "security"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
